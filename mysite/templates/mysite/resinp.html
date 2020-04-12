@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Minor-2</title>
+    <link rel="stylesheet" href="../../static/mysite/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/mysite/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" href="../../static/mysite/assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../static/mysite/assets/css/styles.css">
+</head>
+
+<body style="height: 100%;background-size: cover;background-image: url({% static 'mysite/assets/img/rocket1.jpg' %});">
+    <div class="imgd" style="position: absolute;z-index: -2;"><img src="../../static/mysite/assets/img/rocket1.jpg" style="margin-top: -65px;width: 100%;"></div>
+    <div id="shortimg" style="position: absolute;z-index: -2;"><img src="../../static/mysite/assets/img/rocket2.jpg" style="margin-top: -65px;width: 100%;"></div>
+    <h1 class="text-uppercase text-center d-flex justify-content-center" style="color: rgb(255,255,255);padding: 49px;">welcome hunters</h1>
+    <div class="d-flex d-lg-flex justify-content-end justify-content-sm-center justify-content-md-center justify-content-lg-end" style="margin: 35px;">
+        <div class="miniup" style="background-color: rgba(0,0,0,0.5);border-radius: 10px;padding: 25px;padding-bottom: 50px;">
+            <h2 class="text-uppercase text-center" style="padding: 10px;margin-top: 15px;color: rgb(255,255,255);">upload your resume</h2>
+            <form class="d-flex d-lg-flex flex-column justify-content-center align-items-center justify-content-lg-center align-items-lg-center" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center align-items-sm-center justify-content-lg-center align-items-lg-center" for="resume" style="background-color: white;color: black;padding: 10px;border-radius: 27px;width: 200px;margin: 35px;font-size: 18px;"><i class="fa fa-check-circle" id="done" style="font-size: 31px;color: rgb(8,171,4);display:none;"></i><i class="fa fa-arrow-circle-up" style="font-size: 31px;"></i>&nbsp; Upload PDF</label>
+                <input
+                    class="d-none" type="file" id="resume" style="color: rgb(255,255,255);"  name="resume" required>
+                <i class="fa fa-angle-double-down" data-bs-hover-animate="pulse" style="color: rgb(255,255,255);font-size: 60px;margin: 10px;"></i>
+                <button class="btn btn-primary d-flex justify-content-center" type="submit" style="margin: 20px;padding: 15px;padding-right: 40px;padding-left: 40px;background-color: rgb(255,255,255);border-radius: 39px;"><img src="../../static/mysite/assets/img/g905.png" style="height: 40px;"></button>
+            </form>
+        </div>
+    </div>
+    <script src="../../static/mysite/assets/js/jquery.min.js"></script>
+    <script src="../../static/mysite/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../static/mysite/assets/js/bs-animation.js"></script>
+</body>
+
+</html>

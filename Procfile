@@ -1,0 +1,1 @@
+web: gunicorn minor2_django.wsgi
