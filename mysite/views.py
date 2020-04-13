@@ -4,9 +4,9 @@ from django.shortcuts import render
 # render for the display of screen
 from django.core.files.storage import FileSystemStorage
 # filesystem storage for the file handling
-from django.conf import settings
+# from django.conf import settings
 #  settings for the accessing the current directory for file handling
-path_main=settings.BASE_DIR
+# path_main=settings.BASE_DIR
 # path main represents the current accessing directory some time it is required to have complete path so we use this
 
 
