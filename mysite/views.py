@@ -4,9 +4,9 @@ from django.shortcuts import render
 # render for the display of screen
 from django.core.files.storage import FileSystemStorage
 # filesystem storage for the file handling
-# from django.conf import settings
+from django.conf import settings
 #  settings for the accessing the current directory for file handling
-# path_main=settings.BASE_DIR
+path_main=settings.BASE_DIR
 # path main represents the current accessing directory some time it is required to have complete path so we use this
 
 
@@ -33,7 +33,7 @@ def resin(request):
                 skills = ['it skills', 'key skills', 'professional skills', 'expertise', 'skills', 'mastery',
                           'skills & achievement', 'skills & achievements', 'skill', 'language skill', 'computer skills',
                           'language and skills', 'skills & abilities', 'computer skill']
-                df = pd.read_excel(r'/media/headings.xlsx')
+                df = pd.read_excel(path_main+ r'\media\headings.xlsx')
                 headings = df['headings']
                 copy_headings = []
                 for i in headings:
@@ -50,7 +50,7 @@ def resin(request):
                             return ""
 
                 def rezoom(d):
-                    p = pd.read_csv(r'/media/career.csv')
+                    p = pd.read_csv(path_main+r'\media\career.csv')
                     documents = []
                     jobs = []
                     for i in range(0, 1194):
